@@ -1,22 +1,21 @@
 package toong.vn.androidsomethingaffectram;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        findViewById(R.id.button_start_second_activity).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_second);
+        findViewById(R.id.button_start_third_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                startActivity(new Intent(SecondActivity.this, ThirdActivity.class));
             }
         });
     }
